@@ -1,5 +1,6 @@
 import { pwa } from './app/config/pwa'
 import { appDescription } from './app/constants/index'
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   modules: [
@@ -14,7 +15,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
-
+  css: ['~/assets/css/main.css'],
   app: {
     head: {
       viewport: 'width=device-width,initial-scale=1',
@@ -50,7 +51,11 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2024-08-14',
-
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
   nitro: {
     esbuild: {
       options: {

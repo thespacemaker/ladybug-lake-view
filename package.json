@@ -39,5 +39,9 @@
     "@nuxt/devtools": "catalog:build",
     "unplugin": "catalog:build",
     "vite": "catalog:build"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.7",
+    "tailwindcss": "^4.1.7"
   }
 }
